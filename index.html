@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="ne">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ताजा समाचार</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo">📰</div>
+        <div>
+          <div class="name">ताजा समाचार</div>
+          <div class="tagline">देश–विदेशका ताजा, सत्य र भरपर्दा समाचारहरू</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#top">होम</a>
+        <a href="#categories">श्रेणी</a>
+        <a href="#latest">ताजा</a>
+        <a href="#about">हाम्रो बारे</a>
+        <a href="#contact">सम्पर्क</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>तपाईंको दैनिक समाचार डोज ✨</h1>
+          <p>
+            छिटो अपडेट, स्पष्ट भाषा, र तथ्यमा आधारित खबर। 
+            यहाँ तपाईंले राजनीति, अर्थतन्त्र, खेलकुद, मनोरञ्जन र प्रविधिका ताजा समाचार पाउनुहुन्छ।
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#latest">ताजा समाचार हेर्नुहोस्</a>
+            <a class="btn btn-ghost" href="#about">हाम्रो उद्देश्य</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="card-title">ब्रेकिङ</div>
+          <div class="card-headline" id="breakingTitle">आजका मुख्य खबरहरू</div>
+          <div class="card-meta" id="breakingMeta">अपडेट हुँदैछ…</div>
+          <div class="card-actions">
+            <button class="btn btn-small" id="refreshBtn">रिफ्रेस</button>
+          </div>
+          <div class="card-note">नोट: यो डेमो साइट हो — तल “posts” मा तपाईंले आफ्नै समाचार राख्न सक्नुहुन्छ।</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="categories" class="section">
+      <div class="container">
+        <h2>समाचार श्रेणी</h2>
+        <div class="chips">
+          <button class="chip active" data-filter="all">सबै</button>
+          <button class="chip" data-filter="politics">राजनीति</button>
+          <button class="chip" data-filter="economy">अर्थतन्त्र</button>
+          <button class="chip" data-filter="sports">खेलकुद</button>
+          <button class="chip" data-filter="entertainment">मनोरञ्जन</button>
+          <button class="chip" data-filter="tech">प्रविधि</button>
+          <button class="chip" data-filter="world">विश्व</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="latest" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>ताजा समाचार</h2>
+          <div class="search">
+            <input id="searchInput" type="search" placeholder="खोज्नुहोस्… (जस्तै: खेलकुद, अर्थतन्त्र)" />
+          </div>
+        </div>
+
+        <div id="postsGrid" class="grid"></div>
+      </div>
+    </section>
+
+    <section id="about" class="section alt">
+      <div class="container two-col">
+        <div>
+          <h2>हाम्रो बारे</h2>
+          <p>
+            “ताजा समाचार” को लक्ष्य भनेको सरल नेपाली भाषामा, छिटो र भरपर्दो समाचार प्रस्तुत गर्नु हो।
+            हामी तथ्य जाँच (fact-check) र स्रोतको सम्मानमा विश्वास गर्छौं।
+          </p>
+          <ul class="bullets">
+            <li>छोटो, स्पष्ट र मोबाइल-फ्रेन्डली</li>
+            <li>श्रेणी अनुसार फिल्टर र खोज सुविधा</li>
+            <li>Facebook page सँग सजिलै शेयर गर्न मिल्ने</li>
+          </ul>
+        </div>
+        <div class="info-box">
+          <div class="info-title">टिप</div>
+          <p>
+            तपाईंले चाहनु भयो भने म यसलाई “Blog system” (WordPress) मा पनि रूपान्तरण गरेर
+            तपाईंलाई सजिलै पोस्ट लेख्न मिल्ने बनाइदिन सक्छु।
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container two-col">
+        <div>
+          <h2>सम्पर्क</h2>
+          <p>सुझाव, समाचार टिप वा सहकार्यका लागि:</p>
+          <div class="contact-card">
+            <div><strong>ईमेल:</strong> yournews@email.com</div>
+            <div><strong>फेसबुक:</strong> facebook.com/yourpagename</div>
+          </div>
+        </div>
+
+        <form class="form" onsubmit="return false;">
+          <label>नाम</label>
+          <input type="text" placeholder="तपाईंको नाम" />
+          <label>सन्देश</label>
+          <textarea rows="4" placeholder="यहाँ लेख्नुहोस्…"></textarea>
+          <button class="btn" type="button" onclick="alert('धन्यवाद! यो डेमो हो — ईमेल/फर्म जडान गर्न म सहयोग गर्छु।')">
+            पठाउनुहोस्
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-row">
+      <div>© <span id="year"></span> ताजा समाचार • सबै अधिकार सुरक्षित</div>
+      <div class="footer-links">
+        <a href="#top">माथि</a>
+        <a href="#about">हाम्रो बारे</a>
+        <a href="#contact">सम्पर्क</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
